@@ -1,5 +1,5 @@
-def poly():
-    s = input()
+def poly(string=''):
+    s = string
     s = s + '/'
     coef = ''
     st = ''

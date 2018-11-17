@@ -1,3 +1,5 @@
-from poly_logic import poly
+import poly_logic as pl
+
+
 print('Введите ваш полином(многочлен)')
-print(poly())
+print(pl.poly())
