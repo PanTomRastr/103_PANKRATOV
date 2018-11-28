@@ -18,6 +18,7 @@ class Roman:
     def __add__(self, other):
         if isinstance(other, Roman):
             return Roman(self.seq + other.seq)
+        return TypeError("Это не Римская цифра!")
 
     @staticmethod
     def do_roman_seq(seq):
@@ -26,7 +27,7 @@ class Roman:
         except ValueError:
             return("Это не цифра!")
         if int(seq) > 1999 or int(seq) < 1:
-            return("Выходит  из диапазона")
+            return("Выходит из диапазона")
         else:
             str_1000 = ''
             str_100 = ''

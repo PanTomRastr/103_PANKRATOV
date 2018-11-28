@@ -19,6 +19,27 @@ class Validator(TestCase):
     def test_5(self):
         self.assertEqual(Roman.do_roman_seq(8), ('VIII'))
 
+    def test_6(self):
+        self.assertEqual(Roman(34)+Roman(1965), Roman(1999))
+
+    def test_7(self):
+        self.assertEqual(Roman(3)+Roman(165), Roman(168))
+
+    def test_8(self):
+        self.assertEqual(Roman(4)+Roman(965), Roman(969))
+
+    def test_9(self):
+        self.assertEqual(Roman(555)+Roman(1222), Roman(1777))
+
+    def test_10(self):
+        self.assertEqual(Roman.do_roman_seq(9+1999), ('Выходит из диапазона'))
+
+    def test_11(self):
+        self.assertEqual(Roman.do_roman_seq('nechislo'), ('Это не цифра!'))
+
+    def test_12(self):
+        self.assertEqual(Roman.do_roman_seq(12046), ('Выходит из диапазона'))
+
 
 if __name__ == '__main__':
     main()
