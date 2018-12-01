@@ -40,6 +40,18 @@ class Validator(TestCase):
     def test_12(self):
         self.assertEqual(Roman.do_roman_seq(12046), ('Выходит из диапазона'))
 
+    def test_13(self):
+        self.assertEqual(Roman.do_roman_seq('hello'), ('Это не цифра!'))
+
+    def test_14(self):
+        self.assertEqual(Roman.do_roman_seq('12'), ('XII'))
+
+    def test_15(self):
+        self.assertEqual(Roman.do_roman_seq('243'), ('CCXLIII'))
+
+    def test_16(self):
+        self.assertEqual(Roman.do_roman_seq('123'), ('CXXIII'))
+
 
 if __name__ == '__main__':
     main()

@@ -13,12 +13,12 @@ class Roman:
     def __eq__(self, other):
         if isinstance(other, Roman):
             return self.seq == other.seq
-        return False
+        raise TypeError("Это не Римская цифра!")
 
     def __add__(self, other):
         if isinstance(other, Roman):
             return Roman(self.seq + other.seq)
-        return TypeError("Это не Римская цифра!")
+        raise TypeError("Это не Римская цифра!")
 
     @staticmethod
     def do_roman_seq(seq):
