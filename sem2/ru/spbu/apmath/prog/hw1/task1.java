@@ -18,12 +18,12 @@ public class decimalToBinaryTest
       else
       {
          System.out.print("Convert to binary is: ");
-         System.out.print(binaryform(n));
+         System.out.print(toBinary(n));
       }   
    }
 
 
-   private static Object binaryform(int n)
+   private static Object toBinary(int n)
    {   int n1,i;
        String k=new String();
        String p=new String();
